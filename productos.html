@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos - Tráilers Kenworth México</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navegacion">
+        <div class="contenedor-nav">
+            <div class="marca">
+                <img src="images/logo.png" alt="Logo Tráilers Kenworth" class="logo">
+                <span class="nombre-tienda">Kenworth México</span>
+            </div>
+            <nav class="menu">
+                <ul class="lista-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="productos.html" class="activo">Modelos</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="buscador">
+                    <input type="text" id="campo-busqueda" placeholder="Buscar modelo o tráiler...">
+                    <button onclick="buscarProducto()" class="btn-buscar">🔍</button>
+                </div>
+                <div class="contenedor-carrito">
+                    <a href="#" class="enlace-carrito" onclick="alternarCarrito()">
+                        🛒 Cotizaciones <span id="contador-carrito" class="contador">0</span>
+                    </a>
+                    <div id="menu-carrito" class="menu-carrito-oculto">
+                        <h4>Tu lista de cotización</h4>
+                        <div id="lista-carrito-vacia"><p>No has agregado unidades aún</p></div>
+                        <div id="lista-carrito"></div>
+                        <div class="total-carrito"><strong>Total estimado: $<span id="total-carrito">0.00</span></strong></div>
+                        <button class="btn-comprar">Solicitar Cotización</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina-productos">
+        <h2>🚛 Catálogo completo Kenworth</h2>
+        <div class="contenedor-tarjetas">
+
+            <div class="tarjeta-producto">
+                <img src="images/producto1.jpg" alt="Kenworth W900L">
+                <h3>Kenworth W900L</h3>
+                <p>Motor Cummins X15 565 HP, transmisión manual 18 vel, cabina dormitorio 72". Ícono de la carretera.</p>
+                <p class="precio">Desde $3,150,000 MXN</p>
+                <button onclick="agregarAlCarrito(3150000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto2.jpg" alt="Kenworth W900B">
+                <h3>Kenworth W900B</h3>
+                <p>Motor PACCAR MX-13 510 HP, suspensión neumática, diseño clásico reforzado para carga pesada.</p>
+                <p class="precio">Desde $2,890,000 MXN</p>
+                <button onclick="agregarAlCarrito(2890000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto3.jpg" alt="Kenworth W900A">
+                <h3>Kenworth W900A</h3>
+                <p>Versión tradicional con motor Cummins ISX 500 HP, chasis robusto, ideal para rutas largas nacionales.</p>
+                <p class="precio">Desde $2,750,000 MXN</p>
+                <button onclick="agregarAlCarrito(2750000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto4.jpg" alt="Kenworth W990">
+                <h3>Kenworth W990</h3>
+                <p>Motor Cummins X15 565 HP, diseño moderno con estilo clásico, tecnología de seguridad avanzada.</p>
+                <p class="precio">Desde $3,020,000 MXN</p>
+                <button onclick="agregarAlCarrito(3020000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto5.jpg" alt="Kenworth T680 Next Gen">
+                <h3>Kenworth T680 Next Gen</h3>
+                <p>Motor PACCAR MX-13 510 HP, aerodinámica optimizada, pantalla digital, ahorro de combustible.</p>
+                <p class="precio">Desde $2,520,000 MXN</p>
+                <button onclick="agregarAlCarrito(2520000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto6.jpg" alt="Kenworth T680 Day Cab">
+                <h3>Kenworth T680 Day Cab</h3>
+                <p>Para rutas locales y regionales, motor PACCAR MX-11 430 HP, visibilidad ampliada y maniobrabilidad.</p>
+                <p class="precio">Desde $2,180,000 MXN</p>
+                <button onclick="agregarAlCarrito(2180000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto7.jpg" alt="Kenworth T660">
+                <h3>Kenworth T660</h3>
+                <p>Motor PACCAR MX-13 485 HP, diseño aerodinámico probado, confort y rendimiento equilibrado.</p>
+                <p class="precio">Desde $2,350,000 MXN</p>
+                <button onclick="agregarAlCarrito(2350000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto8.jpg" alt="Kenworth T600">
+                <h3>Kenworth T600</h3>
+                <p>Modelo confiable, motor Cummins ISM 425 HP, bajo costo de operación, ideal para flotas.</p>
+                <p class="precio">Desde $2,100,000 MXN</p>
+                <button onclick="agregarAlCarrito(2100000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto9.jpg" alt="Kenworth T880">
+                <h3>Kenworth T880</h3>
+                <p>Motor Cummins ISX15 600 HP, chasis reforzado, ideal para construcción, minería y carga pesada.</p>
+                <p class="precio">Desde $2,850,000 MXN</p>
+                <button onclick="agregarAlCarrito(2850000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto10.jpg" alt="Kenworth T880S Volteo">
+                <h3>Kenworth T880S Volteo</h3>
+                <p>Motor PACCAR MX-13 510 HP, sistema hidráulico integrado, ejes tándem, listo para volqueta.</p>
+                <p class="precio">Desde $2,970,000 MXN</p>
+                <button onclick="agregarAlCarrito(2970000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto11.jpg" alt="Kenworth T800">
+                <h3>Kenworth T800</h3>
+                <p>Motor Cummins N14 / ISX, resistencia probada en terrenos difíciles, múltiples configuraciones.</p>
+                <p class="precio">Desde $2,680,000 MXN</p>
+                <button onclick="agregarAlCarrito(2680000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto12.jpg" alt="Kenworth T470">
+                <h3>Kenworth T470</h3>
+                <p>Motor PACCAR MX-13 455 HP, suspensión reforzada, cabina espaciosa para carga media.</p>
+                <p class="precio">Desde $2,240,000 MXN</p>
+                <button onclick="agregarAlCarrito(2240000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto13.jpg" alt="Kenworth T440">
+                <h3>Kenworth T440</h3>
+                <p>Motor PACCAR MX-11 430 HP, versátil para reparto regional, carga media y servicios.</p>
+                <p class="precio">Desde $2,080,000 MXN</p>
+                <button onclick="agregarAlCarrito(2080000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto14.jpg" alt="Kenworth T370">
+                <h3>Kenworth T370</h3>
+                <p>Motor PACCAR PX-9 350 HP, chasis ligero pero resistente, ideal para reparto urbano y regional.</p>
+                <p class="precio">Desde $1,950,000 MXN</p>
+                <button onclick="agregarAlCarrito(1950000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto15.jpg" alt="Kenworth C500">
+                <h3>Kenworth C500</h3>
+                <p>Tracción 6x6 / 8x8, motor Cummins X15 605 HP, capacidad de arrastre hasta 150 toneladas.</p>
+                <p class="precio">Desde $3,350,000 MXN</p>
+                <button onclick="agregarAlCarrito(3350000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto16.jpg" alt="Kenworth K270 Urbano">
+                <h3>Kenworth K270 Urbano</h3>
+                <p>Motor PACCAR PX-7 300 HP, cabina sobre motor, radio de giro reducido para ciudades.</p>
+                <p class="precio">Desde $1,920,000 MXN</p>
+                <button onclick="agregarAlCarrito(1920000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto17.jpg" alt="Kenworth K370 Servicio Pesado">
+                <h3>Kenworth K370 Servicio Pesado</h3>
+                <p>Motor PACCAR PX-9 350 HP, chasis de alta resistencia, ideal para cisternas y volteos pequeños.</p>
+                <p class="precio">Desde $2,150,000 MXN</p>
+                <button onclick="agregarAlCarrito(2150000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto18.jpg" alt="Kenworth KW45">
+                <h3>Kenworth KW45</h3>
+                <p>Motor Cummins B6.7 280 HP, tamaño compacto, gran capacidad de carga para servicios urbanos.</p>
+                <p class="precio">Desde $1,680,000 MXN</p>
+                <button onclick="agregarAlCarrito(1680000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto19.jpg" alt="Kenworth KW55">
+                <h3>Kenworth KW55</h3>
+                <p>Motor Cummins L9 320 HP, chasis reforzado, versátil para carga media y pasaje.</p>
+                <p class="precio">Desde $1,850,000 MXN</p>
+                <button onclick="agregarAlCarrito(1850000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="images/producto20.jpg" alt="Kenworth T280">
+                <h3>Kenworth T280</h3>
+                <p>Motor PACCAR PX-9 330 HP, equilibrio perfecto entre potencia y maniobrabilidad.</p>
+                <p class="precio">Desde $1,980,000 MXN</p>
+                <button onclick="agregarAlCarrito(1980000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <p>📧 ventas@trailerskenworth.mx | 📞 +52 722 123 4567 | 📍 Metepec, Estado de México</p>
+            <p>&copy; 2026 Tráilers & Kenworth México - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

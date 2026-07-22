@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones - Tráilers Kenworth</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navegacion">
+        <div class="contenedor-nav">
+            <div class="marca">
+                <img src="images/logo.png" alt="Logo Tráilers Kenworth" class="logo">
+                <span class="nombre-tienda">Kenworth México</span>
+            </div>
+            <nav class="menu">
+                <ul class="lista-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="promociones.html" class="activo">Promociones</a></li>
+                    <li><a href="productos.html">Modelos</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="buscador">
+                    <input type="text" id="campo-busqueda" placeholder="Buscar modelo o tráiler...">
+                    <button onclick="buscarProducto()" class="btn-buscar">🔍</button>
+                </div>
+                <div class="contenedor-carrito">
+                    <a href="#" class="enlace-carrito" onclick="alternarCarrito()">
+                        🛒 Cotizaciones <span id="contador-carrito" class="contador">0</span>
+                    </a>
+                    <div id="menu-carrito" class="menu-carrito-oculto">
+                        <h4>Tu lista de cotización</h4>
+                        <div id="lista-carrito-vacia"><p>No has agregado unidades aún</p></div>
+                        <div id="lista-carrito"></div>
+                        <div class="total-carrito"><strong>Total estimado: $<span id="total-carrito">0.00</span></strong></div>
+                        <button class="btn-comprar">Solicitar Cotización</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina-promociones">
+        <h2>🔥 Tráilers en Promoción</h2>
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta-promocion">
+                <img src="images/promocion1.jpg" alt="Tráiler Caja Seca 53 pies">
+                <h3>Tráiler Caja Seca 53 pies</h3>
+                <p>Capacidad 33 toneladas, estructura de acero galvanizado, puertas reforzadas.</p>
+                <p class="precio"><span>Antes: $850,000</span> Ahora: $722,500</p>
+                <button onclick="agregarAlCarrito(722500)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+            <div class="tarjeta-promocion">
+                <img src="images/promocion2.jpg" alt="Tráiler Plataforma">
+                <h3>Tráiler Plataforma 48 pies</h3>
+                <p>Ideal para carga voluminosa, sistema de amarre reforzado, llantas nuevas.</p>
+                <p class="precio"><span>Antes: $790,000</span> Ahora: $671,500</p>
+                <button onclick="agregarAlCarrito(671500)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+            <div class="tarjeta-promocion">
+                <img src="images/promocion3.jpg" alt="Tráiler Refrigerado">
+                <h3>Tráiler Refrigerado 53 pies</h3>
+                <p>Rango de temperatura -25°C a +25°C, unidad térmica Carrier, piso antideslizante.</p>
+                <p class="precio"><span>Antes: $1,250,000</span> Ahora: $1,062,500</p>
+                <button onclick="agregarAlCarrito(1062500)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+            <div class="tarjeta-promocion">
+                <img src="images/promocion4.jpg" alt="Tráiler Volteo">
+                <h3>Tráiler de Volteo 28 m³</h3>
+                <p>Para materiales de construcción, estructura de acero de alta resistencia, sistema hidráulico.</p>
+                <p class="precio"><span>Antes: $980,000</span> Ahora: $833,000</p>
+                <button onclick="agregarAlCarrito(833000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+            <div class="tarjeta-promocion">
+                <img src="images/promocion5.jpg" alt="Tráiler Tanque">
+                <h3>Tráiler Tanque 30,000 L</h3>
+                <p>Acero inoxidable, certificado para líquidos alimenticios y combustibles, válvulas de seguridad.</p>
+                <p class="precio"><span>Antes: $1,420,000</span> Ahora: $1,207,000</p>
+                <button onclick="agregarAlCarrito(1207000)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+            <div class="tarjeta-promocion">
+                <img src="images/promocion6.jpg" alt="Tráiler Portacontenedores">
+                <h3>Tráiler Portacontenedores</h3>
+                <p>Compatible con contenedores de 20 y 40 pies, sistema de cierre rápido, bajo peso.</p>
+                <p class="precio"><span>Antes: $710,000</span> Ahora: $603,500</p>
+                <button onclick="agregarAlCarrito(603500)" class="btn-agregar">Agregar a cotización</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <p>📧 ventas@trailerskenworth.mx | 📞 +52 722 123 4567 | 📍 Metepec, Estado de México</p>
+            <p>&copy; 2026 Tráilers & Kenworth México - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

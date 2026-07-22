@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tráilers & Kenworth México</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navegacion">
+        <div class="contenedor-nav">
+            <div class="marca">
+                <img src="images/logo.png" alt="Logo Tráilers Kenworth" class="logo">
+                <span class="nombre-tienda">Kenworth México</span>
+            </div>
+            <nav class="menu">
+                <ul class="lista-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="productos.html">Modelos</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                </ul>
+                <div class="buscador">
+                    <input type="text" id="campo-busqueda" placeholder="Buscar modelo o tráiler...">
+                    <button onclick="buscarProducto()" class="btn-buscar">🔍</button>
+                </div>
+                <div class="contenedor-carrito">
+                    <a href="#" class="enlace-carrito" onclick="alternarCarrito()">
+                        🛒 Cotizaciones <span id="contador-carrito" class="contador">0</span>
+                    </a>
+                    <div id="menu-carrito" class="menu-carrito-oculto">
+                        <h4>Tu lista de cotización</h4>
+                        <div id="lista-carrito-vacia"><p>No has agregado unidades aún</p></div>
+                        <div id="lista-carrito"></div>
+                        <div class="total-carrito"><strong>Total estimado: $<span id="total-carrito">0.00</span></strong></div>
+                        <button class="btn-comprar">Solicitar Cotización</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina-contacto">
+        <h2>📬 Contáctanos</h2>
+        <div class="contenedor-contacto">
+            <div class="info-contacto">
+                <h3>Datos de contacto</h3>
+                <p><strong>Correo de ventas:</strong> ventas@trailerskenworth.mx</p>
+                <p><strong>Teléfono:</strong> +52 722 123 4567</p>
+                <p><strong>WhatsApp:</strong> +52 722 987 6543</p>
+                <p><strong>Dirección:</strong> Blvd. de la Industria 789, Parque Industrial, Metepec, Estado de México, CP 52140</p>
+                <p><strong>Horario de atención:</strong> Lunes a Viernes 8:00 a 19:00 | Sábados 9:00 a 14:00</p>
+                <p><strong>Servicios:</strong> Ventas, financiamiento, refacciones y servicio técnico autorizado.</p>
+            </div>
+            <div class="formulario-contacto">
+                <h3>Solicita información o cotización</h3>
+                <form action="#" method="post">
+                    <div class="campo-form">
+                        <label for="nombre">Nombre completo o empresa:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o razón social">
+                    </div>
+                    <div class="campo-form">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required placeholder="tu@correo.com">
+                    </div>
+                    <div class="campo-form">
+                        <label for="telefono">Teléfono de contacto:</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="+52 123 456 7890">
+                    </div>
+                    <div class="campo-form">
+                        <label for="asunto">Asunto:</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="cotizacion">Cotización de unidad nueva</option>
+                            <option value="seminueva">Unidad seminueva</option>
+                            <option value="renta">Renta de tráilers</option>
+                            <option value="financiamiento">Financiamiento</option>
+                            <option value="servicio">Servicio técnico / refacciones</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="campo-form">
+                        <label for="mensaje">Especifica el modelo o lo que necesites:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Ejemplo: Kenworth T680, tráiler caja seca..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <p>📧 ventas@trailerskenworth.mx | 📞 +52 722 123 4567 | 📍 Metepec, Estado de México</p>
+            <p>&copy; 2026 Tráilers & Kenworth México - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

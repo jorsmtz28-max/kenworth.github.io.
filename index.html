@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tráilers y Kenworth - Equipamiento Pesado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navegacion">
+        <div class="contenedor-nav">
+            <div class="marca">
+                <img src="images/logo.png" alt="Logo Tráilers Kenworth" class="logo">
+                <span class="nombre-tienda">Kenworth México</span>
+            </div>
+            <nav class="menu">
+                <ul class="lista-menu">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="productos.html">Modelos</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="buscador">
+                    <input type="text" id="campo-busqueda" placeholder="Buscar modelo o tráiler...">
+                    <button onclick="buscarProducto()" class="btn-buscar">🔍</button>
+                </div>
+                <div class="contenedor-carrito">
+                    <a href="#" class="enlace-carrito" onclick="alternarCarrito()">
+                        🛒 Cotizaciones <span id="contador-carrito" class="contador">0</span>
+                    </a>
+                    <div id="menu-carrito" class="menu-carrito-oculto">
+                        <h4>Tu lista de cotización</h4>
+                        <div id="lista-carrito-vacia"><p>No has agregado unidades aún</p></div>
+                        <div id="lista-carrito"></div>
+                        <div class="total-carrito"><strong>Total estimado: $<span id="total-carrito">0.00</span></strong></div>
+                        <button class="btn-comprar">Solicitar Cotización</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bienvenida">
+            <div class="contenido-bienvenida">
+                <h1>La mejor flota de Tráilers y Kenworth</h1>
+                <p>Venta, renta y financiamiento de unidades nuevas y seminuevas. Calidad y respaldo para tu carga en todo México.</p>
+                <a href="promociones.html" class="btn-principal">Ver Ofertas →</a>
+            </div>
+        </section>
+
+        <section class="modelos-emblematicos">
+            <h2>🚛 Modelos Kenworth más vendidos</h2>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta-producto">
+                    <img src="images/emblematica1.jpg" alt="Kenworth W900L">
+                    <h3>Kenworth W900L</h3>
+                    <p>El ícono de la carretera. Diseño clásico, potencia Cummins y durabilidad probada en rutas largas.</p>
+                    <p class="precio">Desde $3,150,000 MXN</p>
+                    <button onclick="agregarAlCarrito(3150000)" class="btn-agregar">Agregar a cotización</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="images/emblematica2.jpg" alt="Kenworth T680 Next Gen">
+                    <h3>Kenworth T680 Next Gen</h3>
+                    <p>Eficiencia aerodinámica, confort de cabina y tecnología para reducir costos de combustible.</p>
+                    <p class="precio">Desde $2,520,000 MXN</p>
+                    <button onclick="agregarAlCarrito(2520000)" class="btn-agregar">Agregar a cotización</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="images/emblematica3.jpg" alt="Kenworth T880">
+                    <h3>Kenworth T880</h3>
+                    <p>Resistencia para trabajos pesados: construcción, minería y transporte de carga pesada.</p>
+                    <p class="precio">Desde $2,850,000 MXN</p>
+                    <button onclick="agregarAlCarrito(2850000)" class="btn-agregar">Agregar a cotización</button>
+                </div>
+                <div class="tarjeta-producto">
+                    <img src="images/emblematica4.jpg" alt="Kenworth T800">
+                    <h3>Kenworth T800</h3>
+                    <p>Fiabilidad y versatilidad probada en todo tipo de terrenos, ideal para cualquier tipo de carga.</p>
+                    <p class="precio">Desde $2,680,000 MXN</p>
+                    <button onclick="agregarAlCarrito(2680000)" class="btn-agregar">Agregar a cotización</button>
+                </div>
+            </div>
+            <div class="ver-mas">
+                <a href="productos.html" class="btn-principal">Ver todos los modelos →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <p>📧 ventas@trailerskenworth.mx | 📞 +52 722 123 4567 | 📍 Metepec, Estado de México</p>
+            <p>&copy; 2026 Tráilers & Kenworth México - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
