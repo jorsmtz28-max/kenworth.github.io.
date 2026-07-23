@@ -13,6 +13,7 @@ function buscarProducto() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Permitir buscar presionando Enter
     const campoBusqueda = document.getElementById('campo-busqueda');
     if (campoBusqueda) {
         campoBusqueda.addEventListener('keypress', (e) => {
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Resaltar coincidencias en la página de productos
     const parametros = new URLSearchParams(window.location.search);
     const terminoBusqueda = parametros.get('buscar');
     if (terminoBusqueda && window.location.pathname.includes('productos.html')) {
@@ -59,7 +61,9 @@ let total = 0;
 
 function alternarCarrito() {
     const menuCarrito = document.getElementById('menu-carrito');
-    menuCarrito.style.display = menuCarrito.style.display === 'block' ? 'none' : 'block';
+    if (menuCarrito) {
+        menuCarrito.classList.toggle('menu-carrito-visible');
+    }
 }
 
 function agregarAlCarrito(precio) {
@@ -74,20 +78,19 @@ function actualizarCarrito() {
     const totalCarrito = document.getElementById('total-carrito');
     const listaVacia = document.getElementById('lista-carrito-vacia');
     
-    contador.textContent = carrito.length;
-    totalCarrito.textContent = total.toLocaleString('es-MX', { minimumFractionDigits: 2 });
+    if (contador) contador.textContent = carrito.length;
+    if (totalCarrito) totalCarrito.textContent = total.toLocaleString('es-MX', { minimumFractionDigits: 2 });
 
-    if (carrito.length > 0) {
-        listaVacia.style.display = 'none';
-    } else {
-        listaVacia.style.display = 'block';
+    if (listaVacia) {
+        listaVacia.style.display = carrito.length > 0 ? 'none' : 'block';
     }
 }
 
+// Cerrar carrito al hacer clic fuera
 document.addEventListener('click', (e) => {
     const contenedorCarrito = document.querySelector('.contenedor-carrito');
     if (contenedorCarrito && !contenedorCarrito.contains(e.target)) {
         const menuCarrito = document.getElementById('menu-carrito');
-        if (menuCarrito) menuCarrito.style.display = 'none';
+        if (menuCarrito) menuCarrito.classList.remove('menu-carrito-visible');
     }
 });
